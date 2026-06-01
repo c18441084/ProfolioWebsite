@@ -14,79 +14,136 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarHeader,
+} from "@/components/ui/sidebar"
 
 export default function Niallmcnamara(){
     return(
-        <div style={{backgroundColor: "#9aa88d", minHeight: "100vh"}}>
-            <div className="w-full flex justify-center border-b border-black pb-5 pt-5 bg-[#314520] text-white">
-                <NavigationMenu>
-                    <NavigationMenuList className="gap-8">
-                        <NavigationMenuItem className="hover:text-[#314520]">
-                            <NavigationMenuLink href="/" className="text-[18px]">
-                                About
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem className="hover:text-[#314520]">
-                            <NavigationMenuLink href="/" className="text-[18px]">
-                                CV
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem className="hover:text-[#314520]">
-                            <NavigationMenuLink href="/" className="text-[18px]">
-                                Skills
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem className="hover:text-[#314520]">
-                            <NavigationMenuLink href="/" className="text-[18px]">
-                                Projects
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem className="hover:text-[#314520]">
-                            <NavigationMenuLink href="/" className="text-[18px]">
-                                Contact
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem className="absolute left-200 hover:text-[#314520]"> 
-                            <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger asChild>
-                                    <NavigationMenuLink href = "https://github.com/c18441084">
-                                        <FontAwesomeIcon icon={faGithub} className="text-lg"/>
-                                    </NavigationMenuLink>
-                                </TooltipTrigger>
-                                <TooltipContent side="top">
-                                    <p>Github</p>
-                                </TooltipContent>
-                            </Tooltip>        
-                            </TooltipProvider>                    
-                        </NavigationMenuItem>
-                        <NavigationMenuItem className="absolute left-210 hover:text-[#314520]"> 
-                            <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger asChild>
-                                    <NavigationMenuLink href = "https://www.linkedin.com/in/niall-mc-namara-8b39b4192/">
-                                        <FontAwesomeIcon icon={faLinkedinIn} className="text-lg"/>
-                                    </NavigationMenuLink>
-                                </TooltipTrigger>
-                                <TooltipContent side="bottom">
-                                    <p>LinkedIn</p>
-                                </TooltipContent>
-                            </Tooltip>        
-                            </TooltipProvider>                    
-                        </NavigationMenuItem>
+        <div style={{ backgroundColor: "#9aa88d", minHeight: "100vh" }}>
+            <div className="w-full border-b bg-[#314520] text-white px-1 py-1">
 
-                    </NavigationMenuList>
-                    {/* <NavigationMenuList>
-                        <NavigationMenuItem className="justify-inbetween">
-                            <NavigationMenuLink href = "https://github.com/c18441084">
-                                <FontAwesomeIcon icon={faGithub}/>
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                    </NavigationMenuList> */}
-                </NavigationMenu>
+                <div className="flex items-center justify-between">
+
+                    <h1 className="text-l ml-50">
+                        Niall Mc Namara
+                    </h1>
+
+                    <NavigationMenu>
+                        <NavigationMenuList className="flex gap-8 mr-45">
+
+                            <NavigationMenuItem>
+                                <NavigationMenuLink href="/">
+                                    About
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+
+                            <NavigationMenuItem>
+                                <NavigationMenuLink href="/">
+                                    CV
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+
+                            <NavigationMenuItem>
+                                <NavigationMenuLink href="/">
+                                    Projects
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+
+                            <NavigationMenuItem>
+                                <NavigationMenuLink href="/">
+                                    Skills
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+
+                            <NavigationMenuItem>
+                                <NavigationMenuLink href="/">
+                                    Contact
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+                        </NavigationMenuList>
+                    </NavigationMenu>
+                </div>
             </div>
-            <br/>
+            <div className="pt-10">
+                <div className="w-1/2 pl-35 space-y-4">
+                    <p className="text-lg text-[#314520] font-bold">Hello I'm</p>
+                    <p className="text-5xl text-white">Niall Mc Namara</p>
+                    <p className="text-2xl text-[#314520] font-bold">Software Developer</p>
+
+                    <p className="text-white">
+                        Computer Science graduate with a strong knowledge of data structures, 
+                        algorithms and software development. Passionate about building efficient,
+                        scalable and user friendly applications. Eager to learn new languages and
+                        solve real-world problems.
+                    </p>
+                </div>
+            </div>
+            {/* <div className="flex gap-6 items-center">
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                            <a href="https://github.com/c18441084">
+                                <FontAwesomeIcon icon={faGithub} className="text-lg" />
+                            </a>
+                        </TooltipTrigger>
+                        <TooltipContent side="bottom">
+                            <p>Github</p>
+                        </TooltipContent>
+                    </Tooltip>        
+                </TooltipProvider> 
+
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                            <a href="https://www.linkedin.com/in/niall-mc-namara-8b39b4192/">
+                                <FontAwesomeIcon icon={faLinkedinIn} className="text-lg" />
+                            </a>
+                        </TooltipTrigger>
+                        <TooltipContent side="bottom">
+                            <p>LinkedIn</p>
+                        </TooltipContent>
+                    </Tooltip>        
+                </TooltipProvider> 
+            </div> */}
+            {/* <div className="pt-6 flex justify-center items-center">
+                <Card className="w-275">
+                    <CardHeader className="flex justify-center items-center">
+                        <CardTitle className="font-bold text-2xl">Niall Mc Namara</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="flex gap-6">
+                            <Card className="w-80">
+                                <CardHeader className="flex justify-center items-center">
+                                    <CardTitle>Languages</CardTitle>
+                                </CardHeader>
+                            </Card>
+                            <Card className="w-80">
+                                <CardHeader className="flex justify-center items-center">
+                                    <CardTitle>About</CardTitle>
+                                </CardHeader>
+                            </Card>
+                            <Card className="w-80">
+                                <CardHeader className="flex justify-center items-center">
+                                    <CardTitle>Education</CardTitle>
+                                </CardHeader>
+                            </Card>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div> */}
         </div>
     )
 }
