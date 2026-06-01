@@ -1,14 +1,8 @@
-import {
-  NavigationMenu,
-  NavigationMenuContent,
+import { NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
-import { faCode, faGraduationCap, faLocationDot, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import {
   Tooltip,
   TooltipContent,
@@ -23,7 +17,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import { Button } from "@/components/ui/button";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
+import { faCode, faDownload, faFile, faGraduationCap, faLocationDot, faUserTie } from '@fortawesome/free-solid-svg-icons';
 
 export default function Niallmcnamara(){
     return(
@@ -40,31 +37,31 @@ export default function Niallmcnamara(){
                         <NavigationMenuList className="flex gap-8 mr-45">
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="#about-me">
+                                <NavigationMenuLink href="#about-me" className="hover:text-[#314520]">
                                     About
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/">
+                                <NavigationMenuLink href="#cv" className="hover:text-[#314520]">
                                     CV
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/">
+                                <NavigationMenuLink href="/" className="hover:text-[#314520]">
                                     Projects
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/">
+                                <NavigationMenuLink href="/" className="hover:text-[#314520]">
                                     Skills
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/">
+                                <NavigationMenuLink href="/" className="hover:text-[#314520]">
                                     Contact
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -138,19 +135,37 @@ export default function Niallmcnamara(){
                     <br />
                     <a href="https://www.tudublin.ie/">
                         <p className="font-bold">
-                            <FontAwesomeIcon icon={faGraduationCap} className="text-2xl text-[#314520]" />Education
+                            <FontAwesomeIcon icon={faGraduationCap} className="text-2xl text-[#314520] pr-2" />Education
                         </p>
-                        <p className="text-sm pl-9">
+                        <p className="text-sm pl-10">
                             Technolgical University Dublin
                         </p>
                     </a>
                     <br />
                     <p className="font-bold">
-                            <FontAwesomeIcon icon={faCode} className="text-2xl text-[#314520]" />Interests
+                            <FontAwesomeIcon icon={faCode} className="text-2xl text-[#314520] pr-2" />Interests
                     </p>
-                    <p className="text-sm pl-9 w-90">
+                    <p className="text-sm pl-10 w-90">
                         Software Development, Full Stack Development,
                     </p>
+                </div>
+            </div>
+
+
+            <div className="flex bg-[#c6d6b8]" id="cv">
+                <div className="w-1/2 pl-35 pt-10">
+                    <h1 className="text-2xl font-bold pb-2">
+                        <FontAwesomeIcon icon={faFile} className="text-2xl pr-2 text-[#314520]" />CV
+                    </h1>
+                    <p>You can download and view my CV be clicking the link. </p>
+                </div>
+                <div>
+                    <Button className = "bg-[#c6d6b8] border-solid border-black ml-50 mt-15">
+                        <a href="/NiallMcNamaraCV.docx" download="NiallCV.docx">
+                            <FontAwesomeIcon icon={faDownload} className="text-2xl text-[#314520] pr-2 hover:text-[#314520]"/>
+                            Download CV(docx)
+                        </a>
+                    </Button>
                 </div>
             </div>
             {/* <div className="pt-6 flex justify-center items-center">
