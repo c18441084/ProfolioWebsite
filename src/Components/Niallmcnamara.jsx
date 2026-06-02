@@ -17,11 +17,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Badge } from '@/Components/ui/badge';
 import { Button } from "@/components/ui/button";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
-import { faCode, faDownload, faFile, faGraduationCap, faLocationDot, faUserTie } from '@fortawesome/free-solid-svg-icons';
-
+import { faCode, faDownload, faFile, faGraduationCap, faLocationDot, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
+import FindMyOwner from '../../public/Images/FindMyOwner.png';
 export default function Niallmcnamara(){
     return(
         <div style={{ backgroundColor: "#d5e6c5", minHeight: "100vh" }}>
@@ -153,19 +154,62 @@ export default function Niallmcnamara(){
 
 
             <div className="flex bg-[#c6d6b8]" id="cv">
-                <div className="w-1/2 pl-35 pt-10">
+                <div className="w-1/2 pl-35 pt-10 pb-10">
                     <h1 className="text-2xl font-bold pb-2">
                         <FontAwesomeIcon icon={faFile} className="text-2xl pr-2 text-[#314520]" />CV
                     </h1>
                     <p>You can download and view my CV be clicking the link. </p>
                 </div>
                 <div>
-                    <Button className = "bg-[#c6d6b8] border-solid border-black ml-50 mt-15">
-                        <a href="/NiallMcNamaraCV.docx" download="NiallCV.docx">
-                            <FontAwesomeIcon icon={faDownload} className="text-2xl text-[#314520] pr-2 hover:text-[#314520]"/>
-                            Download CV(docx)
+                    <Button className="bg-[#c6d6b8] border border-black ml-50 mt-15 text-[#314520] hover:text-white">
+                        <a href="/NiallMcNamaraCV.docx" download="NiallCV.docx" className="flex items-center">
+                            <FontAwesomeIcon icon={faDownload} className="text-2xl pr-2 text-inherit"/>
+                            <span className="text-inherit">
+                                Download CV(docx)
+                            </span>
                         </a>
                     </Button>
+                </div>
+            </div>
+            <div className="w-full pt-5 pb-10 pl-35 pr-35">
+                <h1 className="text-2xl font-bold pb-7">
+                    <FontAwesomeIcon icon={faWrench} className="text-2xl pr-2 text-[#314520]" />Projects
+                </h1>
+                <div className="flex flex-wrap gap-30">
+                    <Card className="w-90">
+                        <img src={FindMyOwner} />
+                        <CardHeader>
+                            <CardTitle className="font-bold text-lg">Find My Owner</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p>A full stack web application with intention to aid lost and found 
+                                pets. User authenication, real-time updates and image recognition.
+                            </p>
+                            <div className="flex flex-wrap gap-3 mt-3 pb-3">
+                                <Badge className="bg-[#0574FF] text-sm">React</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">React Router Dom</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">Firebase</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">AWS</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">API</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">Bootstrap</Badge>
+                            </div>
+                            <Button>
+                                <a href="https://github.com/c18441084/FinalYearProject">
+                                    <FontAwesomeIcon icon={faGithub} />Code
+                                </a>
+                            </Button>
+                        </CardContent>
+                    </Card>
+                    <Card className="w-90">
+                        <CardHeader className="text-center">
+                            <CardTitle>Photography Website</CardTitle>
+                        </CardHeader>
+                    </Card>
+                    <Card className="w-90">
+                        <CardHeader className="text-center">
+                            <CardTitle>Find My Owner</CardTitle>
+                        </CardHeader>
+                    </Card>
                 </div>
             </div>
             {/* <div className="pt-6 flex justify-center items-center">
