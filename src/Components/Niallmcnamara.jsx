@@ -23,6 +23,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { faCode, faDownload, faFile, faGraduationCap, faLocationDot, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
 import FindMyOwner from '../../public/Images/FindMyOwner.png';
+import PhotographyWebsite from '../../public/Images/PhotographyWebsite.png';
+import Game from '../../public/Images/Game.png';
 export default function Niallmcnamara(){
     return(
         <div style={{ backgroundColor: "#d5e6c5", minHeight: "100vh" }}>
@@ -50,7 +52,7 @@ export default function Niallmcnamara(){
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/" className="hover:text-[#314520]">
+                                <NavigationMenuLink href="#projects" className="hover:text-[#314520]">
                                     Projects
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -82,7 +84,7 @@ export default function Niallmcnamara(){
                         scalable and user friendly applications. Eager to learn new languages and
                         solve real-world problems.
                     </p>
-                    <div className="flex gap-6 ">
+                    <div className="flex gap-6 pb-5">
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger asChild>
@@ -111,8 +113,10 @@ export default function Niallmcnamara(){
                     </div>
                 </div>
             </div>
-            <div className="flex pt-5 pb-5 scroll-mt-1" id="about-me">
-                <div className="w-1/2 pl-35">
+            
+
+            <div className="flex pt-5 pb-5 scroll-mt-1 h-80" id="about-me">
+                <div className="w-1/2 pl-35 pt-15">
                     <h1 className="text-2xl font-bold pb-2">
                         <FontAwesomeIcon icon={faUserTie} className="text-2xl pr-2 text-[#314520]" />About
                     </h1>
@@ -125,7 +129,7 @@ export default function Niallmcnamara(){
                         going to the gym and socializing with friends.
                     </p>
                 </div>
-                <div className="pl-35">
+                <div className="pl-35 pt-5">
                     <p className="font-bold">
                         <FontAwesomeIcon icon={faLocationDot} className="text-2xl text-[#314520]" /> Location
                     </p>
@@ -153,14 +157,14 @@ export default function Niallmcnamara(){
             </div>
 
 
-            <div className="flex bg-[#c6d6b8]" id="cv">
-                <div className="w-1/2 pl-35 pt-10 pb-10">
+            <div className="flex bg-[#c6d6b8] h-45" id="cv">
+                <div className="w-1/2 pl-35 pt-15 pb-10">
                     <h1 className="text-2xl font-bold pb-2">
                         <FontAwesomeIcon icon={faFile} className="text-2xl pr-2 text-[#314520]" />CV
                     </h1>
                     <p>You can download and view my CV be clicking the link. </p>
                 </div>
-                <div>
+                <div className="pt-5">
                     <Button className="bg-[#c6d6b8] border border-black ml-50 mt-15 text-[#314520] hover:text-white">
                         <a href="/NiallMcNamaraCV.docx" download="NiallCV.docx" className="flex items-center">
                             <FontAwesomeIcon icon={faDownload} className="text-2xl pr-2 text-inherit"/>
@@ -171,27 +175,30 @@ export default function Niallmcnamara(){
                     </Button>
                 </div>
             </div>
-            <div className="w-full pt-5 pb-10 pl-35 pr-35">
+
+
+            <div className="w-full pt-15 pb-10 pl-35 pr-35" id="projects">
                 <h1 className="text-2xl font-bold pb-7">
                     <FontAwesomeIcon icon={faWrench} className="text-2xl pr-2 text-[#314520]" />Projects
                 </h1>
                 <div className="flex flex-wrap gap-30">
                     <Card className="w-90">
-                        <img src={FindMyOwner} />
+                        <img src={FindMyOwner} className="h-48 w-full object-cover"/>
                         <CardHeader>
                             <CardTitle className="font-bold text-lg">Find My Owner</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p>A full stack web application with intention to aid lost and found 
-                                pets. User authenication, real-time updates and image recognition.
+                            <p>A full-stack web application designed to streamline 
+                                lost and found pet recovery through secure user authentication, 
+                                real-time data synchronization, 
+                                and AI-powered image recognition.
                             </p>
                             <div className="flex flex-wrap gap-3 mt-3 pb-3">
                                 <Badge className="bg-[#0574FF] text-sm">React</Badge>
-                                <Badge className="bg-[#0574FF] text-sm">React Router Dom</Badge>
                                 <Badge className="bg-[#0574FF] text-sm">Firebase</Badge>
                                 <Badge className="bg-[#0574FF] text-sm">AWS</Badge>
                                 <Badge className="bg-[#0574FF] text-sm">API</Badge>
-                                <Badge className="bg-[#0574FF] text-sm">Bootstrap</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">Authentication</Badge>
                             </div>
                             <Button>
                                 <a href="https://github.com/c18441084/FinalYearProject">
@@ -200,15 +207,54 @@ export default function Niallmcnamara(){
                             </Button>
                         </CardContent>
                     </Card>
+
                     <Card className="w-90">
+                        <img src={PhotographyWebsite} className="h-48 w-full object-cover"/>
                         <CardHeader className="text-center">
                             <CardTitle>Photography Website</CardTitle>
                         </CardHeader>
+                        <CardContent>
+                            <p>A full-stack photography portfolio web application supporting 
+                                dynamic image upload and retrieval across multiple geographic locations, 
+                                with real-time user engagement features including comments and likes for 
+                                interactive content interaction.
+                            </p>
+                            <div className="flex flex-wrap gap-3 mt-3 pb-3">
+                                <Badge className="bg-[#0574FF] text-sm">React</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">React Router Dom</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">Firebase</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">Bootstrap</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">UI/UX</Badge>
+                            </div>
+                            <Button>
+                                <a href="https://github.com/c18441084/Photography-Website">
+                                    <FontAwesomeIcon icon={faGithub} />Code
+                                </a>
+                            </Button>
+                        </CardContent>
                     </Card>
+
                     <Card className="w-90">
+                        <img src={Game} className="h-48 w-full object-cover"/>
                         <CardHeader className="text-center">
-                            <CardTitle>Find My Owner</CardTitle>
+                            <CardTitle>Unity Project</CardTitle>
                         </CardHeader>
+                        <CardContent>
+                            <p>Built a Unity driving game with portal-based level 
+                                transitions across multiple terrains, featuring AI traffic, 
+                                collision-based health and scoring systems, and UI feedback 
+                                for player health and high scores.
+                            </p>
+                            <div className="flex flex-wrap gap-3 mt-3 pb-3">
+                                <Badge className="bg-[#0574FF] text-sm">C#</Badge>
+                                <Badge className="bg-[#0574FF] text-sm">Unity</Badge>
+                            </div>
+                            <Button>
+                                <a href="https://github.com/c18441084/GE-Assignment">
+                                    <FontAwesomeIcon icon={faGithub} />Code
+                                </a>
+                            </Button>
+                        </CardContent>
                     </Card>
                 </div>
             </div>
