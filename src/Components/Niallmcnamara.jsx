@@ -27,14 +27,16 @@ import PhotographyWebsite from '../../public/Images/PhotographyWebsite.png';
 import Game from '../../public/Images/Game.png';
 export default function Niallmcnamara(){
     return(
-        <div style={{ backgroundColor: "#d5e6c5", minHeight: "100vh" }}>
-            <div className="w-full border-b bg-[#314520] text-white px-1 py-1">
+        <div style={{ backgroundColor: "#d5e6c5", minHeight: "100vh"}}>
+            <div className="w-full sticky top-0 z-50 border-b bg-[#314520] text-white px-1 py-1">
 
                 <div className="flex items-center justify-between">
 
-                    <h1 className="text-l ml-50">
-                        Niall Mc Namara
-                    </h1>
+                    <a href="#top">
+                        <h1 className="text-l ml-50">
+                            Niall Mc Namara
+                        </h1>
+                    </a>
 
                     <NavigationMenu>
                         <NavigationMenuList className="flex gap-8 mr-45">
@@ -72,7 +74,9 @@ export default function Niallmcnamara(){
                     </NavigationMenu>
                 </div>
             </div>
-            <div className="pt-10 pb-5 bg-[#9aa88d]">
+
+
+            <div id="top" className="pt-10 pb-5 bg-[#9aa88d]">
                 <div className="w-1/2 pl-35 space-y-4">
                     <p className="text-lg text-[#314520] font-bold">Hello I'm</p>
                     <p className="text-5xl text-white">Niall Mc Namara</p>
@@ -115,7 +119,7 @@ export default function Niallmcnamara(){
             </div>
             
 
-            <div className="flex pt-5 pb-5 scroll-mt-1 h-80" id="about-me">
+            <div className="flex pt-5 pb-5 scroll-mt-20 h-80" id="about-me">
                 <div className="w-1/2 pl-35 pt-15">
                     <h1 className="text-2xl font-bold pb-2">
                         <FontAwesomeIcon icon={faUserTie} className="text-2xl pr-2 text-[#314520]" />About
@@ -157,7 +161,7 @@ export default function Niallmcnamara(){
             </div>
 
 
-            <div className="flex bg-[#c6d6b8] h-45" id="cv">
+            <div className="flex bg-[#c6d6b8] h-45 scroll-mt-20" id="cv">
                 <div className="w-1/2 pl-35 pt-15 pb-10">
                     <h1 className="text-2xl font-bold pb-2">
                         <FontAwesomeIcon icon={faFile} className="text-2xl pr-2 text-[#314520]" />CV
@@ -177,7 +181,7 @@ export default function Niallmcnamara(){
             </div>
 
 
-            <div className="w-full pt-15 pb-10 pl-35 pr-35" id="projects">
+            <div className="w-full pt-15 pb-10 pl-35 pr-35 scroll-mt-20" id="projects">
                 <h1 className="text-2xl font-bold pb-7">
                     <FontAwesomeIcon icon={faWrench} className="text-2xl pr-2 text-[#314520]" />Projects
                 </h1>
@@ -221,7 +225,6 @@ export default function Niallmcnamara(){
                             </p>
                             <div className="flex flex-wrap gap-3 mt-3 pb-3">
                                 <Badge className="bg-[#0574FF] text-sm">React</Badge>
-                                <Badge className="bg-[#0574FF] text-sm">React Router Dom</Badge>
                                 <Badge className="bg-[#0574FF] text-sm">Firebase</Badge>
                                 <Badge className="bg-[#0574FF] text-sm">Bootstrap</Badge>
                                 <Badge className="bg-[#0574FF] text-sm">UI/UX</Badge>
