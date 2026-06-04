@@ -119,43 +119,62 @@ export default function Niallmcnamara(){
             </div>
             
 
-            <div className="flex pt-5 pb-5 scroll-mt-20 h-80" id="about-me">
-                <div className="w-1/2 pl-35 pt-15">
-                    <h1 className="text-2xl font-bold pb-2">
-                        <FontAwesomeIcon icon={faUserTie} className="text-2xl pr-2 text-[#314520]" />About
+           <div className="max-w-7xl mx-auto px-8 py-20 flex justify-between items-start scroll-mt-20" id="about-me">
+                <div className="flex-1 min-w-0 max-w-2xl pl-28">
+                    <h1 className="text-2xl font-bold pb-4">
+                        <FontAwesomeIcon icon={faUserTie} className="text-2xl pr-2 text-[#314520]" />
+                        About
                     </h1>
-                    <p className="pl-9">
-                        I am a Computer Science graduate, obtaining my degree from Technological 
-                        University Dublin, in 2022. I enjoy turning real world problems into 
-                        applications and enjoy working on group projects and being a team player.
-                        I enjoy programming because I enjoy challenges and making a 
-                        difference to a project. Outside of programming, I enjoy football, darts,
-                        going to the gym and socializing with friends.
+
+                    <p className="pl-8">
+                        I am a Computer Science graduate from Technological University Dublin
+                        (2022), with a strong foundation in software development, data structures,
+                        and problem-solving. I have gained experience building projects that translate
+                        real-world requirements into functional applications, both independently and as
+                        part of team-based coursework. I am particularly interested in developing my skills
+                        as a software engineer and continuing to learn modern tools, frameworks, and best
+                        practices. Outside of programming, I enjoy football, darts, fitness, and socialising
+                        with friends.
                     </p>
                 </div>
-                <div className="pl-35 pt-5">
+
+
+                <div className="w-[300px] shrink-0">
                     <p className="font-bold">
-                        <FontAwesomeIcon icon={faLocationDot} className="text-2xl text-[#314520]" /> Location
+                        <FontAwesomeIcon
+                            icon={faLocationDot}
+                            className="text-2xl text-[#314520]"
+                        />
+                        {" "}Location
                     </p>
+
                     <p className="text-sm pl-9">
-                        Harolds Cross,<br />
+                        Harolds Cross,
+                        <br />
                         Dublin
                     </p>
+
                     <br />
+
                     <a href="https://www.tudublin.ie/">
                         <p className="font-bold">
                             <FontAwesomeIcon icon={faGraduationCap} className="text-2xl text-[#314520] pr-2" />Education
                         </p>
+
                         <p className="text-sm pl-10">
-                            Technolgical University Dublin
+                            Technological University Dublin
                         </p>
                     </a>
+
                     <br />
+
                     <p className="font-bold">
-                            <FontAwesomeIcon icon={faCode} className="text-2xl text-[#314520] pr-2" />Interests
+                        <FontAwesomeIcon icon={faCode} className="text-2xl text-[#314520] pr-2"/>Interests
                     </p>
-                    <p className="text-sm pl-10 w-90">
-                        Software Development, Full Stack Development,
+
+                    <p className="text-sm pl-10">
+                        Software Development,
+                        Full Stack Development
                     </p>
                 </div>
             </div>
@@ -185,7 +204,7 @@ export default function Niallmcnamara(){
                 <h1 className="text-2xl font-bold pb-7">
                     <FontAwesomeIcon icon={faWrench} className="text-2xl pr-2 text-[#314520]" />Projects
                 </h1>
-                <div className="flex flex-wrap gap-30">
+                <div className="flex gap-8 overflow-x-auto pb-4">
                     <Card className="w-90">
                         <img src={FindMyOwner} className="h-48 w-full object-cover"/>
                         <CardHeader>
@@ -261,32 +280,24 @@ export default function Niallmcnamara(){
                     </Card>
                 </div>
             </div>
-            {/* <div className="pt-6 flex justify-center items-center">
-                <Card className="w-275">
-                    <CardHeader className="flex justify-center items-center">
-                        <CardTitle className="font-bold text-2xl">Niall Mc Namara</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="flex gap-6">
-                            <Card className="w-80">
-                                <CardHeader className="flex justify-center items-center">
-                                    <CardTitle>Languages</CardTitle>
-                                </CardHeader>
-                            </Card>
-                            <Card className="w-80">
-                                <CardHeader className="flex justify-center items-center">
-                                    <CardTitle>About</CardTitle>
-                                </CardHeader>
-                            </Card>
-                            <Card className="w-80">
-                                <CardHeader className="flex justify-center items-center">
-                                    <CardTitle>Education</CardTitle>
-                                </CardHeader>
-                            </Card>
-                        </div>
-                    </CardContent>
-                </Card>
-            </div> */}
+
+            <div className="flex bg-[#c6d6b8] h-45 scroll-mt-20" id="skills">
+                <div className="w-1/2 pl-35 pt-15 pb-10">
+                    <h1 className="text-2xl font-bold pb-2">
+                        <FontAwesomeIcon icon={faCode} className="text-2xl pr-2 text-[#314520]" />Skills
+                    </h1>
+                </div>
+                <div className="pt-5">
+                    {/* <Button className="bg-[#c6d6b8] border border-black ml-50 mt-15 text-[#314520] hover:text-white">
+                        <a href="/NiallMcNamaraCV.docx" download="NiallCV.docx" className="flex items-center">
+                            <FontAwesomeIcon icon={faDownload} className="text-2xl pr-2 text-inherit"/>
+                            <span className="text-inherit">
+                                Download CV(docx)
+                            </span>
+                        </a>
+                    </Button> */}
+                </div>
+            </div>
         </div>
     )
 }
