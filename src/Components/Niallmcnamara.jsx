@@ -1,4 +1,5 @@
-import { NavigationMenu,
+import { 
+  NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -12,16 +13,16 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea"
+import { Input } from '@/Components/ui/input';
 import { Badge } from '@/Components/ui/badge';
 import { Button } from "@/components/ui/button";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
-import { faCode, faDownload, faFile, faGraduationCap, faLocationDot, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faBootstrap, faGithub, faHtml5, faJs, faJsSquare, faLinkedin, faLinkedinIn, faPostgresql, faPython, faReact, faTailwindCss } from "@fortawesome/free-brands-svg-icons"
+import { faCode, faDatabase, faDownload, faEnvelope, faFile, faGraduationCap, faLocationDot, faPaperPlane, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
 import FindMyOwner from '../../public/Images/FindMyOwner.png';
 import PhotographyWebsite from '../../public/Images/PhotographyWebsite.png';
 import Game from '../../public/Images/Game.png';
@@ -60,13 +61,13 @@ export default function Niallmcnamara(){
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/" className="hover:text-[#314520]">
+                                <NavigationMenuLink href="#skills" className="hover:text-[#314520]">
                                     Skills
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/" className="hover:text-[#314520]">
+                                <NavigationMenuLink href="#contact" className="hover:text-[#314520]">
                                     Contact
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -119,8 +120,8 @@ export default function Niallmcnamara(){
             </div>
             
 
-           <div className="max-w-7xl mx-auto px-8 py-20 flex justify-between items-start scroll-mt-20" id="about-me">
-                <div className="flex-1 min-w-0 max-w-2xl pl-28">
+           <div className="w-full md:px-12 lg:px-33 py-20 grid grid-cols-1 lg:grid-cols-[2fr_300px] items-start scroll-mt-20" id="about-me">
+                <div className="max-w-2xl justify-self-start">
                     <h1 className="text-2xl font-bold pb-4">
                         <FontAwesomeIcon icon={faUserTie} className="text-2xl pr-2 text-[#314520]" />
                         About
@@ -139,7 +140,7 @@ export default function Niallmcnamara(){
                 </div>
 
 
-                <div className="w-[300px] shrink-0">
+                <div className="w-full lg:w-[300px] lg:justify-self-end">
                     <p className="font-bold">
                         <FontAwesomeIcon
                             icon={faLocationDot}
@@ -281,23 +282,102 @@ export default function Niallmcnamara(){
                 </div>
             </div>
 
-            <div className="flex bg-[#c6d6b8] h-45 scroll-mt-20" id="skills">
-                <div className="w-1/2 pl-35 pt-15 pb-10">
+            <div className="bg-[#c6d6b8] h-auto pl-35 pb-10 scroll-mt-20" id="skills">
+                <div className="w-1/2 pt-15 pb-10">
                     <h1 className="text-2xl font-bold pb-2">
                         <FontAwesomeIcon icon={faCode} className="text-2xl pr-2 text-[#314520]" />Skills
                     </h1>
                 </div>
-                <div className="pt-5">
-                    {/* <Button className="bg-[#c6d6b8] border border-black ml-50 mt-15 text-[#314520] hover:text-white">
-                        <a href="/NiallMcNamaraCV.docx" download="NiallCV.docx" className="flex items-center">
-                            <FontAwesomeIcon icon={faDownload} className="text-2xl pr-2 text-inherit"/>
-                            <span className="text-inherit">
-                                Download CV(docx)
-                            </span>
-                        </a>
-                    </Button> */}
+                <div className="flex gap-8">
+                    <Card className="w-35 bg-[#61dbfb]">
+                        <CardHeader className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faReact} className="text-white text-3xl" />
+                            <CardTitle className="text-lg text-white">React</CardTitle>
+                        </CardHeader>
+                    </Card>
+
+                    <Card className="w-35 bg-[#F0DB4F]">
+                        <CardHeader className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faJsSquare} className="text-white text-3xl" />
+                            <CardTitle className="text-sm text-white">JavaScript</CardTitle>
+                        </CardHeader>
+                    </Card>
+
+                    <Card className="w-35 bg-[#4B8BBE]">
+                        <CardHeader className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faPython} className="text-[#FFD43B] text-3xl" />
+                            <CardTitle className="text-lg text-white">Python</CardTitle>
+                        </CardHeader>
+                    </Card>
+
+                    <Card className="w-35 bg-[#00758F]">
+                        <CardHeader className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faDatabase} className="text-white text-3xl" />
+                            <CardTitle className="text-lg text-white">SQL</CardTitle>
+                        </CardHeader>
+                    </Card>
+
+                    <Card className="w-35 bg-[#E34C26]">
+                        <CardHeader className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faHtml5} className="text-white text-3xl" />
+                            <CardTitle className="text-lg text-white">HTML</CardTitle>
+                        </CardHeader>
+                    </Card>
+
+                    <Card className="w-35 bg-[#602C50]">
+                        <CardHeader className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faBootstrap} className="text-white text-3xl" />
+                            <CardTitle className="text-m text-white">Bootstrap</CardTitle>
+                        </CardHeader>
+                    </Card>
+
+                    <Card className="w-35 bg-[#003366]">
+                        <CardHeader className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faTailwindCss} className="text-white text-3xl" />
+                            <CardTitle className="text-m text-white">Tailwind</CardTitle>
+                        </CardHeader>
+                    </Card>
                 </div>
             </div>
+
+             <div className="h-auto pl-35 pb-10 scroll-mt-20" id="contact">
+                <div className="w-1/2 pt-15">
+                    <h1 className="text-2xl font-bold pb-2">
+                        <FontAwesomeIcon icon={faEnvelope} className="text-2xl pr-2 text-[#314520]" />Contact
+                    </h1>
+                </div>
+                <div className="flex">
+                    <p>
+                        I am always open to hear of any opportunities and collaborations.<br/>
+                        Feel free to reach out
+                    </p>
+                    <div className="ml-50">
+                        <FontAwesomeIcon icon={faEnvelope} className="text-m pr-2 text-[#314520]" />niallmcnamara1999@gmail.com
+                        <br/>
+                        <br/>
+                        <FontAwesomeIcon icon={faLinkedin} className="text-m pr-2 text-[#314520]" />
+                        <a href="https://www.linkedin.com/in/niall-mc-namara-8b39b4192/">
+                            https://www.linkedin.com/in/niall-mc-namara-8b39b4192/
+                        </a>
+                        <br/>
+                        <br/>
+                        <FontAwesomeIcon icon={faLinkedin} className="text-m pr-2 text-[#314520]" />
+                        <a href="https://github.com/c18441084/">
+                            https://github.com/c18441084/
+                        </a>
+                    </div>
+                    <div className="ml-35 w-80 space-y-5">
+                        <div className="flex gap-4">                        
+                            <Input className="bg-[#c6d6b8]" placeholder="Your Name" />
+                            <Input className="bg-[#c6d6b8]" placeholder ="Your Email"/>
+                        </div>
+                        <Textarea className="bg-[#c6d6b8] h-25 " placeholder="Message..."/>
+                        <Button>
+                            <FontAwesomeIcon icon={faPaperPlane}/>Send
+                        </Button>
+                    </div>
+                </div>
+             </div>
         </div>
     )
 }
