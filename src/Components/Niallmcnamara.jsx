@@ -26,7 +26,30 @@ import { faCode, faDatabase, faDownload, faEnvelope, faFile, faGraduationCap, fa
 import FindMyOwner from '../../public/Images/FindMyOwner.png';
 import PhotographyWebsite from '../../public/Images/PhotographyWebsite.png';
 import Game from '../../public/Images/Game.png';
+import { useState } from "react";
 export default function Niallmcnamara(){
+    const [emailInfo, setEmailInfo] = useState({ name: "",  email: "", message: "" });
+
+    const handleChange = (e) => {
+        setEmailInfo({
+        ...emailInfo,
+        [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailInfo),
+        });
+
+        const data = await response.json();
+        alert(data.message);
+    };
     return(
         <div style={{ backgroundColor: "#d5e6c5", minHeight: "100vh"}}>
             <div className="w-full sticky top-0 z-50 border-b bg-[#314520] text-white px-1 py-1">
@@ -368,11 +391,11 @@ export default function Niallmcnamara(){
                     </div>
                     <div className="ml-35 w-80 space-y-5">
                         <div className="flex gap-4">                        
-                            <Input className="bg-[#c6d6b8]" placeholder="Your Name" />
-                            <Input className="bg-[#c6d6b8]" placeholder ="Your Email"/>
+                            <Input className="bg-[#c6d6b8]" name="name" placeholder="Your Name"  value={emailInfo.name} onChange={handleChange}/>
+                            <Input className="bg-[#c6d6b8]" name="email" placeholder ="Your Email" value={emailInfo.email} onChange={handleChange}/>
                         </div>
-                        <Textarea className="bg-[#c6d6b8] h-25 " placeholder="Message..."/>
-                        <Button>
+                        <Textarea className="bg-[#c6d6b8] h-25 " name="message" placeholder="Message..." value={emailInfo.message} onChange={handleChange}/>
+                        <Button type="submit" onClick={handleSubmit}>
                             <FontAwesomeIcon icon={faPaperPlane}/>Send
                         </Button>
                     </div>
