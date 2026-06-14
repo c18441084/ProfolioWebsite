@@ -360,7 +360,6 @@ export default function Niallmcnamara(){
 
                     <Card className="w-35 bg-[#003366]">
                         <CardHeader className="flex items-center gap-3">
-                            <FontAwesomeIcon icon={faTailwindCss} className="text-white text-3xl" />
                             <CardTitle className="text-m text-white">Tailwind</CardTitle>
                         </CardHeader>
                     </Card>
