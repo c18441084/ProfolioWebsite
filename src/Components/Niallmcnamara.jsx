@@ -17,8 +17,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea"
-import { Input } from '@/Components/ui/input';
-import { Badge } from '@/Components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
 import { Button } from "@/components/ui/button";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faBootstrap, faGithub, faHtml5, faJs, faJsSquare, faLinkedin, faLinkedinIn, faPostgresql, faPython, faReact, faTailwindCss } from "@fortawesome/free-brands-svg-icons"
@@ -39,7 +39,7 @@ export default function Niallmcnamara(){
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("/api/contact", {
+        const response = await fetch("/api/contact.js", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
