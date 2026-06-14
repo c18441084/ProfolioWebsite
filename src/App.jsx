@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from './Components/Niallmcnamara.jsx';
+import Home from './components/Niallmcnamara.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
