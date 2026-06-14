@@ -39,16 +39,20 @@ export default function Niallmcnamara(){
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(emailInfo),
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(emailInfo),
         });
 
         const data = await response.json();
-        alert(data.message);
+        if (data.success) {
+            alert("Email sent successfully!");
+        } else {
+            alert("Failed to send email");
+        }
     };
     return(
         <div style={{ backgroundColor: "#d5e6c5", minHeight: "100vh"}}>
