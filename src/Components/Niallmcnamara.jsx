@@ -3,23 +3,23 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu.jsx"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip.jsx";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea"
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/card.jsx";
+import { Textarea } from "@/components/ui/textarea.jsx"
+import { Input } from '@/components/ui/input.jsx';
+import { Badge } from '@/components/ui/badge.jsx';
+import { Button } from "@/components/ui/button.jsx";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faBootstrap, faGithub, faHtml5, faJs, faJsSquare, faLinkedin, faLinkedinIn, faPostgresql, faPython, faReact, faTailwindCss } from "@fortawesome/free-brands-svg-icons"
 import { faCode, faDatabase, faDownload, faEnvelope, faFile, faGraduationCap, faLocationDot, faPaperPlane, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
