@@ -16,12 +16,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea";
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Button } from "@/components/ui/button";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faBootstrap, faGithub, faHtml5, faJs, faJsSquare, faLinkedin, faLinkedinIn, faPostgresql, faPython, faReact, faTailwindCss } from "@fortawesome/free-brands-svg-icons"
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faBootstrap, faGithub, faHtml5, faJs, faJsSquare, faLinkedin, faLinkedinIn, faPostgresql, faPython, faReact, faTailwindCss } from "@fortawesome/free-brands-svg-icons";
 import { faCode, faDatabase, faDownload, faEnvelope, faFile, faGraduationCap, faLocationDot, faPaperPlane, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
 import FindMyOwner from '../../public/Images/FindMyOwner.png';
 import PhotographyWebsite from '../../public/Images/PhotographyWebsite.png';
