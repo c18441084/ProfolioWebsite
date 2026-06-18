@@ -3,28 +3,29 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "./ui/navigation-menu"
+} from "../components/ui/navigation-menu"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
+} from "../components/ui/tooltip";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Textarea } from "./ui/textarea";
-import { Input } from './ui/input';
-import { Badge } from './ui/badge';
-import { Button } from "./ui/button";
+} from "../components/ui/card";
+import { Textarea } from "../components/ui/textarea";
+import { Input } from '../components/ui/input';
+import { Badge } from '../components/ui/badge';
+import { Button } from "../components/ui/button";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faBootstrap, faGithub, faHtml5, faJs, faJsSquare, faLinkedin, faLinkedinIn, faPostgresql, faPython, faReact, faTailwindCss } from "@fortawesome/free-brands-svg-icons";
-import { faCode, faDatabase, faDownload, faEnvelope, faFile, faGraduationCap, faLocationDot, faPaperPlane, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faDatabase, faDownload, faDumbbell, faEnvelope, faFile, faGraduationCap, faLocationDot, faPaperPlane, faUserTie, faWrench } from '@fortawesome/free-solid-svg-icons';
 import FindMyOwner from '../../public/Images/FindMyOwner.png';
 import PhotographyWebsite from '../../public/Images/PhotographyWebsite.png';
+import Me from '../../public/Images/me.png'
 import Game from '../../public/Images/Game.png';
 import { useState } from "react";
 export default function Niallmcnamara(){
@@ -104,11 +105,11 @@ export default function Niallmcnamara(){
             </div>
 
 
-            <div id="top" className="pt-10 pb-5 bg-[#9aa88d]">
-                <div className="w-1/2 pl-35 space-y-4">
+            <div id="top" className="pt-10 pb-5 bg-[#9aa88d] flex gap-80">
+                <div className="w-1/2 pl-35 space-y-4 pt-7">
                     <p className="text-lg text-[#314520] font-bold">Hello I'm</p>
                     <p className="text-5xl text-white">Niall Mc Namara</p>
-                    <p className="text-2xl text-[#314520] font-bold">Software Developer</p>
+                    <p className="text-2xl text-[#314520] font-bold pt-6">Software Developer</p>
 
                     <p className="text-white">
                         Computer Science graduate with a strong knowledge of data structures, 
@@ -144,12 +145,15 @@ export default function Niallmcnamara(){
                         </TooltipProvider> 
                     </div>
                 </div>
+                <div>
+                    <img src={Me} className="h-100 rounded-xl"/>
+                </div>
             </div>
             
 
-           <div className="w-full md:px-12 lg:px-33 py-20 grid grid-cols-1 lg:grid-cols-[2fr_300px] items-start scroll-mt-20" id="about-me">
-                <div className="max-w-2xl justify-self-start">
-                    <h1 className="text-2xl font-bold pb-4">
+           <div className="pt-10 pb-5 flex gap-90">
+                <div className="w-1/2 pl-35 space-y-4 pt-4">
+                    <h1 className="text-2xl font-bold">
                         <FontAwesomeIcon icon={faUserTie} className="text-2xl pr-2 text-[#314520]" />
                         About
                     </h1>
@@ -197,18 +201,20 @@ export default function Niallmcnamara(){
                     <br />
 
                     <p className="font-bold">
-                        <FontAwesomeIcon icon={faCode} className="text-2xl text-[#314520] pr-2"/>Interests
+                        <FontAwesomeIcon icon={faDumbbell} className="text-2xl text-[#314520] pr-2"/>Strengths
                     </p>
 
                     <p className="text-sm pl-10">
-                        Software Development,
-                        Full Stack Development
+                        Quick Learner,<br/>
+                        Co-operative,<br/>
+                        Hard Worker,<br/>
+                        Friendly
                     </p>
                 </div>
             </div>
 
 
-            <div className="flex bg-[#c6d6b8] h-45 scroll-mt-20" id="cv">
+            <div className="flex bg-[#c6d6b8] h-45 scroll-mt-20 gap-90" id="cv">
                 <div className="w-1/2 pl-35 pt-15 pb-10">
                     <h1 className="text-2xl font-bold pb-2">
                         <FontAwesomeIcon icon={faFile} className="text-2xl pr-2 text-[#314520]" />CV
@@ -216,7 +222,7 @@ export default function Niallmcnamara(){
                     <p>You can download and view my CV be clicking the link. </p>
                 </div>
                 <div className="pt-5">
-                    <Button className="bg-[#c6d6b8] border border-black ml-50 mt-15 text-[#314520] hover:text-white">
+                    <Button className="bg-[#c6d6b8] border border-black mt-15 text-[#314520] hover:text-white">
                         <a href="/NiallMcNamaraCV.docx" download="NiallCV.docx" className="flex items-center">
                             <FontAwesomeIcon icon={faDownload} className="text-2xl pr-2 text-inherit"/>
                             <span className="text-inherit">
@@ -354,7 +360,7 @@ export default function Niallmcnamara(){
                     <Card className="w-35 bg-[#602C50]">
                         <CardHeader className="flex items-center gap-3">
                             <FontAwesomeIcon icon={faBootstrap} className="text-white text-3xl" />
-                            <CardTitle className="text-m text-white">Bootstrap</CardTitle>
+                            <CardTitle className="text-sm text-white">Bootstrap</CardTitle>
                         </CardHeader>
                     </Card>
 
