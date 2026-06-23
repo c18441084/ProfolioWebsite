@@ -383,7 +383,7 @@ export default function Niallmcnamara(){
                         I am always open to hear of any opportunities and collaborations.<br/>
                         Feel free to reach out
                     </p>
-                    <div className="ml-50">
+                    <div className="ml-30">
                         <FontAwesomeIcon icon={faEnvelope} className="text-m pr-2 text-[#314520]" />niallmcnamara1999@gmail.com
                         <br/>
                         <br/>
@@ -398,7 +398,7 @@ export default function Niallmcnamara(){
                             https://github.com/c18441084/
                         </a>
                     </div>
-                    <div className="ml-35 w-80 space-y-5">
+                    <div className="ml-30 w-80 space-y-5">
                         <div className="flex gap-4">                        
                             <Input className="bg-[#c6d6b8]" name="name" placeholder="Your Name"  value={emailInfo.name} onChange={handleChange}/>
                             <Input className="bg-[#c6d6b8]" name="email" placeholder ="Your Email" value={emailInfo.email} onChange={handleChange}/>
